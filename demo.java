@@ -5,5 +5,6 @@ public class demo{
     {
 
         System.out.println("hello git");
+        System.out.println("second hello");
     }
 }
