@@ -1,0 +1,65 @@
+ADMIN@DESKTOP-6PTEN1D MINGW64 ~
+$ ssh-add ~/.ssh/github_rsa
+Could not open a connection to your authentication agent.
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 ~
+$ ssh-agent -s
+SSH_AUTH_SOCK=/tmp/ssh-s5aYjGkQcC2g/agent.501; export SSH_AUTH_SOCK;
+SSH_AGENT_PID=502; export SSH_AGENT_PID;
+echo Agent pid 502;
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 ~
+$ ssh-add ~/.ssh/github_rsa
+Could not open a connection to your authentication agent.
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 ~
+$ git remote -v
+fatal: not a git repository (or any of the parent directories): .git
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 ~
+$ cd e: test
+bash: cd: too many arguments
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 ~
+$ cd e:\test
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test (main)
+$ git remote -v
+origin  git@github.com:dameeta/testdemo.git (fetch)
+origin  git@github.com:dameeta/testdemo.git (push)
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test (main)
+$ ssh-add ~/.ssh/github_rsa
+Could not open a connection to your authentication agent.
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test (main)
+$ git remote -v
+origin  git@github.com:dameeta/testdemo.git (fetch)
+origin  git@github.com:dameeta/testdemo.git (push)
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test (main)
+$ git remote set-url origin git://github.com/javadems/testdemo.git
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test (main)
+$ git push -u origin main
+fatal: remote error:
+  You can't push to git://github.com/javadems/testdemo.git
+  Use https://github.com/javadems/testdemo.git
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test (main)
+$ git remote set-url origin https://github.com/javadems/testdemo.git
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test (main)
+$ git push -u origin main
+Select an authentication method for 'https://github.com/':
+  1. Web browser (default)
+  2. Personal access token
+option (enter for default): 1
+info: please complete authentication in your browser...
+remote: Repository not found.
+fatal: repository 'https://github.com/javadems/testdemo.git/' not found
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test (main)
+$
+==========================================
+https://stackoverflow.com/questions/12940626/github-error-message-permission-denied-publickey
